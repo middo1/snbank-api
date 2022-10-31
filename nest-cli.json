@@ -1,5 +1,22 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "src",
+  "monorepo": true,
+  "root": "",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "tsconfig.app.json"
+  },
+  "projects": {
+    "snbank-api": {
+      "type": "application",
+      "root": "s",
+      "entryFile": "main",
+      "sourceRoot": "src",
+      "compilerOptions": {
+        "tsConfigPath": "tsconfig.app.json"
+      }
+    }
+  }
 }
